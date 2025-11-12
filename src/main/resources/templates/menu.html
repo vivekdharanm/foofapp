@@ -1,0 +1,8 @@
+<h2>Menu</h2>
+<form action="/order" method="post">
+    <div th:each="item : ${items}">
+        <input type="checkbox" name="itemIds" th:value="${item.id}" /> 
+        <span th:text="${item.name} + ' - $' + ${item.price}"></span>
+    </div>
+    <button type="submit">Place Order</button>
+</form>
