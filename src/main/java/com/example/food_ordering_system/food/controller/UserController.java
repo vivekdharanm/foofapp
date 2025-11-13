@@ -41,7 +41,7 @@ public class UserController
         return "menu";
     }
     
-    @PostMapping("/order")
+    @PostMapping("/user/order")
     public String placeOrder(@RequestParam List<Long> itemIds, Model model)
     {
         User user = userRepository.findById(1L).orElseThrow(); // demo user
